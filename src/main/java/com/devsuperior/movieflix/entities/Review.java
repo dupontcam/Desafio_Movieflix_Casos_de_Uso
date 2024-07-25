@@ -10,6 +10,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.NotBlank;
 
 @Entity
 @Table(name = "tb_review")
@@ -20,6 +21,7 @@ public class Review {
     private Long id;
 
     @Column(columnDefinition = "TEXT")
+    @NotBlank
     private String text;
 
     @ManyToOne
